@@ -36,7 +36,7 @@ root = xmltree.getroot()
 if root.tag != 'gnc-v2':
     raise ValueError("File stream was not a valid GNU Cash v2 XML file")
 
-for ns in ["gnc", "cd", "book", "slot", "cmdty", "price", "ts", "act", "trn", "split"]:
+for ns in ["gnc", "cd", "book", "slot", "cmdty", "price", "ts", "act", "trn", "split", "recurrence", "cust", "bgt", "addr", "vendor", "sx"]:
     ElementTree.register_namespace(ns, "http://www.gnucash.org/XML/" + ns)
 
 dtfrom = datetime.datetime.strptime(args.year + "-01-01 00:00:00", '%Y-%m-%d %H:%M:%S')
