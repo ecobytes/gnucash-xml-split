@@ -13,7 +13,7 @@ Usage
 The input zipped GnuCash XML file. This file will not be changed in the operation.
 
 `-o out.gnucash`
-The output GnuCash XML file. This file is a text XML file which not zipped. It would contain all transactions happen between the year specified by `-y` and the year specified by `e`. All other transactions (either before or after the time range) will be removed.
+The output GnuCash XML file. This file is a text XML file which not zipped. It would contain all transactions happen between the year specified by `-y` and the year specified by `-e`. All other transactions (either before or after the time range) will be removed.
 
 `-y 2014`
 The start point (as year) to extract transactions.
