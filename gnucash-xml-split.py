@@ -15,7 +15,7 @@ tzoff = None
 nl = "\n"
 
 nsdict = {}
-for ns in ["gnc", "cd", "book", "slot", "cmdty", "price", "ts", "act", "trn", "split", "recurrence", "cust", "bgt", "addr", "vendor", "sx", "fs", "owner", "bt-days", "bt-prox", "cust", "employee", "entry", "invoice", "job", "order", "taxtable", "tte", "vendor"]:
+for ns in ["gnc", "cd", "book", "slot", "cmdty", "price", "ts", "act", "trn", "split", "recurrence", "cust", "bgt", "addr", "vendor", "sx", "fs", "owner", "billterm", "lot", "bt-days", "bt-prox", "cust", "employee", "entry", "invoice", "job", "order", "taxtable", "tte", "vendor"]:
     url = "http://www.gnucash.org/XML/" + ns
     ElementTree.register_namespace(ns, url)
     nsdict[ns] = url
@@ -247,8 +247,8 @@ if book_count == 1:
             print("Prior balance for %d accounts written as a starting balance transaction" % (
                 balance_count))
         else:
-            print("Prior balance for %d accounts written to %d*.qif" % (
-                balance_count))
+            print("Prior balance for %d accounts written to *%s.qif" % (
+                balance_count, cmdy_key))
 else:
     print("Processed %d books" % (book_count))
 
