@@ -15,7 +15,7 @@ tzoff = None
 nl = "\n"
 
 nsdict = {}
-for ns in ["gnc", "cd", "book", "slot", "cmdty", "price", "ts", "act", "trn", "split", "recurrence", "cust", "bgt", "addr", "vendor", "sx"]:
+for ns in ["gnc", "cd", "book", "slot", "cmdty", "price", "ts", "act", "trn", "split", "recurrence", "cust", "bgt", "addr", "vendor", "sx", "fs", "owner", "bt-days", "bt-prox", "cust", "employee", "entry", "invoice", "job", "order", "taxtable", "tte", "vendor"]:
     url = "http://www.gnucash.org/XML/" + ns
     ElementTree.register_namespace(ns, url)
     nsdict[ns] = url
